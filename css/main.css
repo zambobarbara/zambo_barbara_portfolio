@@ -1,0 +1,175 @@
+body{
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+*, *::before, *::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+img{
+	max-width: 100%;
+}
+/*--layout--*/
+	body{
+		display: grid;
+		grid-template-areas: 
+			"fejlec"
+			"kontent"
+			"lablec"
+		;
+		grid-template-rows: max-content 1fr max-content;
+		min-height: 100vh;
+		
+	}
+	header{
+		background-color: darkgray;
+		grid-area: fejlec;
+		color: lightgray;
+		letter-spacing: 3px;
+		
+		
+	}
+	
+	main{
+		background-color: lightgray;
+		grid-area: kontent;
+		margin: 20px;
+	}
+	footer{
+		background-color: darkgray;
+		grid-area: lablec;
+		text-align: right;
+	}
+/*--layout_end--*/
+/*--általános--*/
+ul{
+	overflow: hidden;
+    background-color: gray;
+    list-style: none;
+    top: 0
+	display: block;
+}
+a{
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+li a{
+	float: center;
+	padding: 0px 100px;
+	text-decoration: none;
+	}
+li a: hover{
+	background-color: lightgray;
+	color: gray;
+}
+.lablec_jobb{
+	padding-right: 20px;
+}
+.lablec_bal{
+	text-align: left;
+	color: white;
+	padding-left: 20px;
+}
+
+/*--általános_end--*/
+
+/*--azonos_header--*/
+	header{
+		line-height: 2rem;
+		font-size: .95rem;
+		text-align: left;
+		padding: .75rem 1rem;
+		position: relative;
+		
+	}
+
+	}
+	
+
+/*--azonos_header_end--*/
+
+/*--header_bal--*/
+	.header_bal{
+		text-align: left;
+	}
+/*--header_bal_end--*/
+#menu{
+	width: 100%;
+	display: block;
+	margin-top: 1rem;
+	text-align: center;
+}
+.aktív_oldal{
+	background-color: darkgray;
+	color: white;
+}
+/*--main--*/
+.kartya{
+	max-width: 100%;
+	border: 0px;
+	padding: 50px;
+	margin: 1rem;
+	text-align: center;
+	color: gray;
+}
+.kartya h2,h3{
+	letter-spacing: 3px;
+	margin: .83rem;
+}
+.kartya img{
+	max-width: 100%;
+	max-height: 20rem;
+	margin: 16px auto;
+	display: inline-block;
+}
+
+.haromkep{
+	display: flex;
+}
+.oldalkep{
+	flex-grow: 1;
+}
+.oldalkep img{
+	object-fit: cover;
+	height: 100%;
+}
+
+/*--main_end--*/
+/*--kep_racs--*/
+.kepek_grid_racs{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+	grid-gap: 1rem;
+	margin: 1rem;
+}
+.kep_kartya{
+	height: 10rem;
+}
+.kep_kartya img{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	transition: transform .2s;
+  	margin: 0 auto;
+  	cursor: pointer;
+}
+
+.kep_kartya{
+	padding: 0px;
+  background-color: gray;
+  transition: transform .2s;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+}
+.kep_kartya img:hover {
+  -ms-transform: scale(1.5); 
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5); 
+}
+
+
+
